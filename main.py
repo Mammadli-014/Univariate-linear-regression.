@@ -7,7 +7,7 @@ matplotlib.use("TkAgg")
 X = []
 y = []
 
-with open(r"C:\Users\user\Documents\Course_Folder\ML\data.txt", "r") as file:
+with open(r"C:\Users\user\Documents\Course_Folder\ML\data.txt", "r") as file: #the file was attached
     for line in file:
         line = line.strip()
         parts = line.split(",")
@@ -17,7 +17,7 @@ with open(r"C:\Users\user\Documents\Course_Folder\ML\data.txt", "r") as file:
 
 X = np.array(X)
 y = np.array(y)
-y = y / 1000000
+y = y / 1000000  #normalize the Y value
 
 
 plt.scatter(X, y, label="Data")
